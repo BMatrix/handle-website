@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: auto;
 }
 .lefttext {
   text-align: left;

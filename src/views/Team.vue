@@ -27,6 +27,7 @@
 }
 #members{
   margin-top: 3em;
+  width: 100%;
 }
 </style>
 

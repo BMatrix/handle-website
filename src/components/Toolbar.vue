@@ -67,7 +67,7 @@ img {
 }
 .link:hover {
   transition: all 0.3s ease-in-out;
-  background-color: red;
+  background-color: #f61f28;
   color: white;
 }
 .link div {
