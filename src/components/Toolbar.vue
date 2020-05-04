@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar>
+  <v-toolbar flat>
     <v-toolbar-items id="main">
       <router-link class="logo" :to="{ name: 'Home'}">
         <img src="logo.png" />

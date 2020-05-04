@@ -1,30 +1,45 @@
 <template>
-  <div :class="['member', reverse ? 'reverse' : '']">
-    <v-avatar size="200px" :class="['avatar']">
-      <img :src="image" />
-      <div :class="['grayscale', redscale ? 'redscale' : '']"></div>
-    </v-avatar>
-    <div id="text" :class="[reverse ? 'righttext' : 'lefttext']">
-      <h2>
-        <slot name="name"></slot>
-      </h2>
-      <h3>
-        <slot name="role"></slot>
-      </h3>
-      <p>
-        <slot name="description"></slot>
-      </p>
+  <div :class="[background ? 'background' : '']">
+    <div class="center">
+      <div :class="['member', reverse ? 'reverse' : '']">
+        <v-avatar size="200px" :class="['avatar']">
+          <img :src="image" />
+          <div :class="['grayscale', redscale ? 'redscale' : '']"></div>
+        </v-avatar>
+        <div id="text" :class="[reverse ? 'righttext' : 'lefttext']">
+          <h2>
+            <slot name="name"></slot>
+          </h2>
+          <h3>
+            <slot name="role"></slot>
+          </h3>
+          <p>
+            <slot name="description"></slot>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.center {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .member {
   display: flex;
   flex-direction: row;
+  padding: 1em;
 }
 .reverse {
   flex-direction: row-reverse;
+}
+
+.background {
+  background-color: #cfcfcf;
 }
 
 .grayscale {
@@ -39,7 +54,7 @@
   background-color: #00000000;
 }
 .redscale {
-    background-color: #f73b3ba2;
+  background-color: #f73b3ba2;
 }
 
 #text {
@@ -68,8 +83,12 @@ export default {
       default: false
     },
     redscale: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
+    },
+    background: {
+      type: Boolean,
+      default: false
     }
   }
 };
