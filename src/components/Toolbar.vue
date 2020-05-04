@@ -55,6 +55,7 @@ img {
 #links {
   display: flex;
   align-self: center;
+  align-items: center;
   height: inherit;
 }
 .link {
@@ -75,5 +76,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+p{
+  height: 1em;
 }
 </style>

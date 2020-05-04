@@ -2,7 +2,7 @@
   <div class="home">
     <div class="center">
       <div class="head">
-        <h1>You can Handle It!</h1>
+        <h1>You Can Handle It!</h1>
       </div>
     </div>
     <div class="main">
@@ -56,7 +56,6 @@
 }
 
 .main {
-  position: absolute;
   width: 100%;
   height: auto;
   background-color: white;
