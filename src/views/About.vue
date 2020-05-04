@@ -5,7 +5,7 @@
     </div>
     <div class="wide">
       <div class="center">
-        <h2>Title Here</h2>
+        <h1>Title Here</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse expedita fuga, explicabo mollitia commodi dignissimos eligendi! Quia eveniet natus in culpa vero vel deserunt error minus fuga. Laboriosam, eveniet tempore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam nobis accusamus facilis voluptatum, veniam voluptatibus. Ratione numquam velit perspiciatis a? Aperiam magnam praesentium odio minus earum iste vero sed delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolores nemo, earum autem voluptatum beatae mollitia doloremque non perspiciatis ipsam odit laudantium, veritatis aperiam corrupti, aliquid inventore laboriosam eveniet aspernatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nesciunt, ea laborum ipsum atque officiis minima vitae fuga facere cupiditate error doloribus tenetur dignissimos ut odio porro voluptatem vero placeat.</p>
       </div>
       <div class="center">
@@ -43,6 +43,7 @@
   width: 100%;
   height: auto;
   padding: 2em 0 2em 0;
+  color: white;
 }
 
 .extra {
@@ -50,6 +51,7 @@
   display: flex;
   flex-direction: row-reverse;
   background-color: white;
+  color: black;
   padding: 1em;
 }
 .extra img {

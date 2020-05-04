@@ -46,10 +46,15 @@ export default {
 .logo {
   height: inherit;
 }
-img {
+.logo img {
   height: inherit;
   width: auto;
-  padding: 2% 0 2% 0;
+  padding: 2%;
+  transition: all 0.3s ease-in-out;
+}
+.logo img:hover {
+  padding: 1.5%;
+  transition: all 0.3s ease-in-out;
 }
 
 #links {
@@ -77,7 +82,7 @@ img {
   flex-direction: column;
   justify-content: center;
 }
-p{
+p {
   height: 1em;
 }
 </style>
