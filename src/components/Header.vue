@@ -78,10 +78,7 @@ export default {
       type: String,
       default: null
     },
-    toolbarcolor: {
-      type: String,
-      default: null
-    },
+    toolbarcolor: String,
     activepage: Number
   },
   data() {

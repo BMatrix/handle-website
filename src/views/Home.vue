@@ -1,11 +1,8 @@
 <template>
   <div class="home">
-    <Toolbar></Toolbar>
-    <div class="center">
-      <div class="head">
-        <h1>You Can Handle It!</h1>
-      </div>
-    </div>
+    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :activepage="0">
+      <template v-slot:title>You Can Hande it!</template>
+    </Header>
     <div class="main">
       <div class="center">
         <div class="content">
@@ -22,38 +19,11 @@
 
 
 <style scoped>
-.home {
-  background-color: #f61f28;
-  height: 100%;
-}
-
 .center {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
   text-align: center;
-}
-
-.head {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  width: 80%;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  background-image: url("../../public/enviroments/enviroment1.jpg");
-  background-position: center bottom;
-  background-size: cover;
-  border: solid black 5px;
-  color: white;
-  font-size: 1.25em;
-}
-.head h1 {
-  align-self: start;
-  padding: 0 0 1.2em 1.5em;
 }
 
 .main {
@@ -82,10 +52,10 @@
 </style>
 
 <script>
-import Toolbar from "../components/Toolbar.vue";
+import Header from "../components/Header.vue";
 export default {
   components: {
-    Toolbar
+    Header
   }
 };
 </script>

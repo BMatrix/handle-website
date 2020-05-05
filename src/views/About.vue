@@ -1,9 +1,11 @@
 <template>
   <div class="about">
-    <Toolbar></Toolbar>
-    <div class="center">
-      <img src="models/model3.png" />
-    </div>
+    <Header :backgroundimage="'models/model3.png'" :activepage="1">
+      <template v-slot:title>About</template>
+      <template
+        v-slot:text
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quisquam assumenda obcaecati veniam reprehenderit ad, ullam, necessitatibus nostrum nemo error et placeat aliquam non magnam delectus corrupti enim doloribus molestiae?</template>
+    </Header>
     <div class="wide">
       <div class="center">
         <h1>Title Here</h1>
@@ -69,10 +71,10 @@
 </style>
 
 <script>
-import Toolbar from "../components/Toolbar.vue";
+import Header from "../components/Header.vue";
 export default {
   components: {
-    Toolbar
+    Header
   }
 };
 </script>

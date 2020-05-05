@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-app>
-      <!-- <Toolbar></Toolbar> -->
       <transition name="fade" mode="out-in">
         <router-view></router-view>
       </transition>
@@ -11,12 +10,10 @@
 </template>
 
 <script>
-import Toolbar from "./components/Toolbar.vue";
 import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Toolbar,
     Footer
   }
 };

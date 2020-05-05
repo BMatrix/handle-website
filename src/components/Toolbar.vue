@@ -5,7 +5,12 @@
         <img src="logo.png" />
       </router-link>
       <div id="links">
-        <router-link v-for="link in links" :key="link.id" :class="['link', link.id == activeid ? 'active' : '']" :to="{ name: link.link}">
+        <router-link
+          v-for="link in links"
+          :key="link.id"
+          :class="['link', link.id == activeid ? 'active' : '']"
+          :to="{ name: link.link}"
+        >
           <div>
             <p>{{ link.name }}</p>
           </div>
@@ -19,7 +24,10 @@
 export default {
   name: "Toolbar",
   props: {
-    color: String,
+    color: {
+      type: String,
+      default: '#00000000'
+    },
     activeid: Number
   },
   data() {
@@ -102,8 +110,8 @@ p {
   height: 1em;
 }
 
-.active{
+.active {
   text-decoration: underline;
-  color: blue
+  color: blue;
 }
 </style>
