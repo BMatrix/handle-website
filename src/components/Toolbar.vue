@@ -1,23 +1,13 @@
 <template>
-  <v-toolbar flat>
+  <v-toolbar flat :color="color">
     <v-toolbar-items id="main">
       <router-link class="logo" :to="{ name: 'Home'}">
         <img src="logo.png" />
       </router-link>
       <div id="links">
-        <router-link class="link" :to="{ name: 'Home'}">
+        <router-link v-for="link in links" :key="link.id" :class="['link', link.id == activeid ? 'active' : '']" :to="{ name: link.link}">
           <div>
-            <p>HOME</p>
-          </div>
-        </router-link>
-        <router-link class="link" :to="{ name: 'About'}">
-          <div>
-            <p>ABOUT</p>
-          </div>
-        </router-link>
-        <router-link class="link" :to="{ name: 'Team'}">
-          <div>
-            <p>TEAM</p>
+            <p>{{ link.name }}</p>
           </div>
         </router-link>
       </div>
@@ -28,9 +18,34 @@
 <script>
 export default {
   name: "Toolbar",
+  props: {
+    color: String,
+    activeid: Number
+  },
   data() {
     return {
-      a: 0
+      links: [
+        {
+          id: 0,
+          name: "HOME",
+          link: "Home"
+        },
+        {
+          id: 1,
+          name: "ABOUT",
+          link: "About"
+        },
+        {
+          id: 2,
+          name: "TEAM",
+          link: "Team"
+        },
+        {
+          id: 3,
+          name: "CONTACT",
+          link: "Contact"
+        }
+      ]
     };
   }
 };
@@ -40,7 +55,7 @@ export default {
 #main {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
@@ -70,6 +85,7 @@ export default {
   color: black;
   font-family: Arial;
   font-size: 1.5em;
+  text-decoration: none;
 }
 .link:hover {
   transition: all 0.3s ease-in-out;
@@ -84,5 +100,10 @@ export default {
 }
 p {
   height: 1em;
+}
+
+.active{
+  text-decoration: underline;
+  color: blue
 }
 </style>

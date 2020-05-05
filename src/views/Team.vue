@@ -1,5 +1,6 @@
 <template>
   <div class="team">
+    <Toolbar></Toolbar>
     <div class="center">
       <h1>The Team</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum adipisci, voluptatum laboriosam nesciunt ex commodi voluptatem similique accusamus totam cupiditate sint, voluptas harum, iusto tempora libero reiciendis distinctio alias!</p>
@@ -32,9 +33,11 @@
 </style>
 
 <script>
+import Toolbar from "../components/Toolbar.vue";
 import Member from "../components/Member.vue";
 export default {
   components: {
+    Toolbar,
     Member
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app>
-      <Toolbar></Toolbar>
+      <!-- <Toolbar></Toolbar> -->
       <transition name="fade" mode="out-in">
         <router-view></router-view>
       </transition>

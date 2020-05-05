@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Toolbar></Toolbar>
     <div class="center">
       <div class="head">
         <h1>You Can Handle It!</h1>
@@ -8,7 +9,7 @@
     <div class="main">
       <div class="center">
         <div class="content">
-          <img src="models/model1.png">
+          <img src="models/model1.png" />
           <div>
             <h2>Title Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus voluptas fugit quaerat nemo quos, aut at eum voluptatum, reiciendis, eos illum dolor corrupti quasi odio architecto adipisci maxime fugiat.</p>
@@ -61,21 +62,30 @@
   background-color: white;
 }
 
-.content{
+.content {
   padding: 2em 0 2em 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.content img{
+.content img {
   width: 40%;
   flex-shrink: 0;
 }
-.content div{
-  display:flex;
+.content div {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
   padding-left: 10%;
 }
 </style>
+
+<script>
+import Toolbar from "../components/Toolbar.vue";
+export default {
+  components: {
+    Toolbar
+  }
+};
+</script>

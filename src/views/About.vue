@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <Toolbar></Toolbar>
     <div class="center">
       <img src="models/model3.png" />
     </div>
@@ -66,3 +67,12 @@
   flex-direction: column;
 }
 </style>
+
+<script>
+import Toolbar from "../components/Toolbar.vue";
+export default {
+  components: {
+    Toolbar
+  }
+};
+</script>
