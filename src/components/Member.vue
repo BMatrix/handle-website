@@ -24,7 +24,7 @@
 
 <style scoped>
 .center {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -32,7 +32,7 @@
 .member {
   display: flex;
   flex-direction: row;
-  padding: 1em;
+  padding: 1em 0 1em 0;
 }
 .reverse {
   flex-direction: row-reverse;

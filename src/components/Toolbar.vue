@@ -45,11 +45,6 @@ export default {
         },
         {
           id: 2,
-          name: "TEAM",
-          link: "Team"
-        },
-        {
-          id: 3,
           name: "CONTACT",
           link: "Contact"
         }

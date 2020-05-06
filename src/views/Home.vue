@@ -19,6 +19,19 @@
         :image33="'posters/poster3.png'"
       ></Galery>
     </div>
+    <div class="team">
+      <h2>Meet our Team!</h2>
+      <div id="members">
+        <member class="member"                   :redscale="true"  :background="true"  :image="'team/AleksandraLobka.jpg'">    <template v-slot:name>Aleksandra Lobka</template>     <template v-slot:role>Architecture Engineering</template>   <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"  :reverse="true"                                        :image="'team/BenVinck.jpg'">           <template v-slot:name>Ben Vinck</template>            <template v-slot:role>Electronics and ICT</template>        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"                                     :background="true"  :image="'team/DarioVanMechelen.png'">   <template v-slot:name>Dario Van Mechelen</template>   <template v-slot:role>Graphic and Digital Media</template>  <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"  :reverse="true"  :redscale="true"                      :image="'team/EricGonzales.jpg'">       <template v-slot:name>Eric Gonzales</template>        <template v-slot:role>Industrial Design</template>          <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"                   :redscale="true"  :background="true"  :image="'team/JoyAgwunedu.jpg'">        <template v-slot:name>Joy Agwunedu</template>         <template v-slot:role>Multimedia Production</template>      <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"  :reverse="true"                                        :image="'team/MadelinaGavril.jpg'">     <template v-slot:name>Madelina Gavril</template>      <template v-slot:role>Advertising</template>                <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"                   :redscale="true"  :background="true"  :image="'team/MarioGomezCarnero.jpg'">  <template v-slot:name>Mario Gomez Carnero</template>  <template v-slot:role>Industrial Design</template>          <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+        <member class="member"  :reverse="true"                                        :image="'team/Sara-GülKangöz.jpg'">     <template v-slot:name>Sara-Gül Kangöz</template>      <template v-slot:role>Media and Communications</template>   <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
+      </div>
+    </div>
     <div class="main">
       <div class="center">
         <div class="content">
@@ -37,7 +50,7 @@
 h2 {
   color: blue;
   font-size: 3em;
-  margin: 1em 0 0.5em 0.3em;
+  padding: 0.5em 0 0.5em 0.3em;
 }
 
 .productidea {
@@ -46,6 +59,12 @@ h2 {
 }
 .galery {
   margin: 2em 0 2em 0;
+}
+
+.team h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .center {
@@ -83,10 +102,12 @@ h2 {
 <script>
 import Header from "../components/Header.vue";
 import Galery from "../components/Galery.vue";
+import Member from "../components/Member.vue";
 export default {
   components: {
     Header,
-    Galery
+    Galery,
+    Member
   }
 };
 </script>
