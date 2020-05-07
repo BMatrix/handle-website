@@ -47,7 +47,7 @@ h2 {
   margin: 0 auto 0 auto;
   width: 80%;
 }
-.galery {
+.productidea .galery {
   margin: 2em 0 2em 0;
 }
 
@@ -57,7 +57,7 @@ h2 {
   width: 80%;
 }
 
-.interested {
+.home .interested {
   left: 50%;
   margin: 2em 0 2em 0;
 }

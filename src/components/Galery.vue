@@ -1,6 +1,6 @@
 <template>
   <div class="galery">
-    <div class="images">
+    <div :class="['images', nonav ? 'nonav' : '']">
       <div :class="picked">
         <img :src="image11" />
         <img :src="image12" />
@@ -17,7 +17,7 @@
         <img :src="image33" />
       </div>
     </div>
-    <div class="buttons">
+    <div class="buttons" v-if="!nonav">
       <span v-on:click="select(1)">
         <span :class="radio1"></span>
       </span>
@@ -37,11 +37,14 @@
 }
 
 .images {
-  height: 80%;
+  height: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   column-gap: 2%;
+}
+.nonav {
+  height: 100%
 }
 .images div {
   display: grid;
@@ -150,6 +153,10 @@
 export default {
   name: "Galery",
   props: {
+    nonav: {
+      type: Boolean,
+      default: false
+    },
     image11: String,
     image12: String,
     image13: String,
