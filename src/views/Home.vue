@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :activepage="0">
+    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :activepage="0" :toolbarcolor="'#FF000060'">
       <template v-slot:title>You Can Hande it!</template>
     </Header>
     <div class="productidea">
@@ -32,17 +32,7 @@
         <member class="member"  :reverse="true"                                        :image="'team/Sara-GülKangöz.jpg'">     <template v-slot:name>Sara-Gül Kangöz</template>      <template v-slot:role>Media and Communications</template>   <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eos voluptates explicabo dolor delectus enim debitis similique maxime assumenda pariatur ad vero optio earum, tempore numquam placeat atque distinctio accusamus.</template></member>
       </div>
     </div>
-    <div class="main">
-      <div class="center">
-        <div class="content">
-          <img src="models/model1.png" />
-          <div>
-            <h2>Title Here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus voluptas fugit quaerat nemo quos, aut at eum voluptatum, reiciendis, eos illum dolor corrupti quasi odio architecto adipisci maxime fugiat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Interested class="interested"></Interested>
   </div>
 </template>
 
@@ -67,35 +57,9 @@ h2 {
   width: 80%;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  text-align: center;
-}
-
-.main {
-  width: 100%;
-  height: auto;
-  background-color: white;
-}
-
-.content {
-  padding: 2em 0 2em 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.content img {
-  width: 40%;
-  flex-shrink: 0;
-}
-.content div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  padding-left: 10%;
+.interested {
+  left: 50%;
+  margin: 2em 0 2em 0;
 }
 </style>
 
@@ -103,11 +67,13 @@ h2 {
 import Header from "../components/Header.vue";
 import Galery from "../components/Galery.vue";
 import Member from "../components/Member.vue";
+import Interested from "../components/Interested.vue";
 export default {
   components: {
     Header,
     Galery,
-    Member
+    Member,
+    Interested
   }
 };
 </script>

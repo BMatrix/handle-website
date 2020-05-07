@@ -6,21 +6,21 @@
         v-slot:text
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quisquam assumenda obcaecati veniam reprehenderit ad, ullam, necessitatibus nostrum nemo error et placeat aliquam non magnam delectus corrupti enim doloribus molestiae?</template>
     </Header>
-    <div class="wide">
-      <div class="center">
-        <h1>Title Here</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse expedita fuga, explicabo mollitia commodi dignissimos eligendi! Quia eveniet natus in culpa vero vel deserunt error minus fuga. Laboriosam, eveniet tempore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam nobis accusamus facilis voluptatum, veniam voluptatibus. Ratione numquam velit perspiciatis a? Aperiam magnam praesentium odio minus earum iste vero sed delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolores nemo, earum autem voluptatum beatae mollitia doloremque non perspiciatis ipsam odit laudantium, veritatis aperiam corrupti, aliquid inventore laboriosam eveniet aspernatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nesciunt, ea laborum ipsum atque officiis minima vitae fuga facere cupiditate error doloribus tenetur dignissimos ut odio porro voluptatem vero placeat.</p>
-      </div>
-      <div class="center">
-        <div class="extra">
-          <img src="enviroments/enviroment2.jpg" />
-          <div>
-            <h2>Title Here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dicta facere asperiores ipsa explicabo, harum dolorem provident cumque. Iste in quos ullam est illo eius beatae reiciendis autem modi suscipit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus id asperiores molestiae ab voluptates laboriosam, nesciunt quos nisi, eius dicta quis fuga, ipsa eaque? Aperiam distinctio quibusdam accusantium illo quas. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, dolorum voluptas?</p>
-          </div>
-        </div>
-      </div>
+    <div class="information">
+      <DescribedImage class="work" :image="'enviroments/enviroment1.jpg'" :reverse="true">
+        <template v-slot:title>Title Here</template>
+        <template
+          v-slot:text
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.</template>
+      </DescribedImage>
+      <DescribedImage class="work" :image="'enviroments/enviroment2.jpg'">
+        <template v-slot:title>Title Here</template>
+        <template
+          v-slot:text
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.</template>
+      </DescribedImage>
     </div>
+    <Interested class="interested"></Interested>
   </div>
 </template>
 
@@ -29,52 +29,24 @@
   height: 100%;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  text-align: center;
+.information * {
+  margin: 4em 0 4em 0;
 }
 
-.center > img {
-  padding: 2em 0 2em 0;
-  width: 80%;
-}
-
-.wide {
-  background-color: #f61f28;
-  width: 100%;
-  height: auto;
-  padding: 2em 0 2em 0;
-  color: white;
-}
-
-.extra {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: white;
-  color: black;
-  padding: 1em;
-}
-.extra img {
-  flex-shrink: 0;
-  width: 40%;
-}
-.extra div {
-  align-self: center;
-  text-align: right;
-  padding: 0 10% 0 0;
-  display: flex;
-  flex-direction: column;
+.interested {
+  margin: 8em 0 8em 0;
 }
 </style>
 
 <script>
 import Header from "../components/Header.vue";
+import DescribedImage from "../components/DescribedImage.vue";
+import Interested from "../components/Interested.vue";
 export default {
   components: {
-    Header
+    Header,
+    DescribedImage,
+    Interested
   }
 };
 </script>
