@@ -1,23 +1,29 @@
 <template>
   <div class="contact">
-    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :activepage="3">
-      <template v-slot:title>Title</template>
-      <template v-slot:text>Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia ea nulla voluptate asperiores beatae consectetur excepturi aliquam quasi ipsa saepe tempora quas, ipsum officiis labore, debitis omnis sunt necessitatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi quos nam nihil fugit unde, amet saepe reprehenderit reiciendis. Dolores dolorem, ut vero in soluta consectetur minima corporis non officiis fuga!</template>
+    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :middle="true" :activepage="3">
+      <template v-slot:title>
+        Have a question or want to collaborate with us?
+        <br />Please get in touch.
+      </template>
     </Header>
+    <Contact class="form"></Contact>
   </div>
 </template>
 
 <style scoped>
-.contact {
-  height: 100%;
+.form {
+  margin: 4em auto 4em auto;
+  width: 85%;
 }
 </style>
 
 <script>
+import Contact from "../components/Contact.vue";
 import Header from "../components/Header.vue";
 export default {
   components: {
-    Header
+    Header,
+    Contact
   }
 };
 </script>

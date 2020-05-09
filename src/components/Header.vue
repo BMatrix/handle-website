@@ -50,6 +50,7 @@
   width: 90%;
 }
 .middletext h1 {
+  color: black;
   font-size: 2.5em;
 }
 
