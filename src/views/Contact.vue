@@ -2,8 +2,7 @@
   <div class="contact">
     <Header :backgroundimage="'enviroments/enviroment1.jpg'" :middle="true" :activepage="3">
       <template v-slot:title>
-        Have a question or want to collaborate with us?
-        <br />Please get in touch.
+      {{ text.title }}
       </template>
     </Header>
     <Contact class="form"></Contact>
@@ -18,12 +17,18 @@
 </style>
 
 <script>
+import { Contact as text} from "../lang/en.js";
 import Contact from "../components/Contact.vue";
 import Header from "../components/Header.vue";
 export default {
   components: {
     Header,
     Contact
+  },
+  data(){
+    return {
+      text: new text()
+    }
   }
 };
 </script>

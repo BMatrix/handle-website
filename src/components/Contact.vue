@@ -1,16 +1,16 @@
 <template>
   <div class="content">
-    <h2>Contact form</h2>
+    <h2>{{ text.title }}</h2>
     <form>
       <div>
-        <input type="text" placeholder="First name" required />
-        <input type="text" placeholder="Last name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Company (Optional)" />
-        <textarea rows="4" placeholder="Message" required />
+        <input type="text"  :placeholder="text.first_name" required />
+        <input type="text"  :placeholder="text.last_name" required />
+        <input type="email" :placeholder="text.email" required />
+        <input type="text"  :placeholder="text.company" />
+        <textarea rows="4"  :placeholder="text.message" required />
       </div>
       <div>
-        <input type="submit" value="Send" />
+        <input type="submit" :value="text.button" />
       </div>
     </form>
   </div>
@@ -59,7 +59,13 @@ form div:last-child * {
 </style>
 
 <script>
+import { Form } from "../lang/en.js";
 export default {
-  name: "Contact"
+  name: "Contact",
+  data(){
+    return {
+      text: new Form()
+    }
+  }
 };
 </script>

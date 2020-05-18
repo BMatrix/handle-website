@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { Navigation } from "../lang/en.js";
+let text = new Navigation();
 export default {
   name: "Toolbar",
   props: {
@@ -35,17 +37,17 @@ export default {
       links: [
         {
           id: 0,
-          name: "HOME",
+          name: text.navigation_home,
           link: "Home"
         },
         {
           id: 1,
-          name: "ABOUT",
+          name: text.navigation_about,
           link: "About"
         },
         {
           id: 2,
-          name: "CONTACT",
+          name: text.navigation_contact,
           link: "Contact"
         }
       ]

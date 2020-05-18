@@ -1,9 +1,9 @@
 <template>
   <div class="interested">
-    <h2>Are you interested?</h2>
-    <h3>Feel free to contact us</h3>
+    <h2>{{ text.title }}</h2>
+    <h3>{{ text.subtext }}</h3>
     <router-link class="link" :to="'Contact'">
-      <h3 class="button">Contact us</h3>
+      <h3 class="button">{{ text.button }}</h3>
     </router-link>
   </div>
 </template>
@@ -32,3 +32,14 @@ h3 {
   border-radius: 15px;
 }
 </style>
+
+<script>
+import { Interested } from "../lang/en.js";
+export default {
+  data(){
+    return {
+      text: new Interested()
+    }
+  }
+}
+</script>

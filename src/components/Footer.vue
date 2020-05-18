@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p class="cr">Copyright Handle 2019-2020</p>
+    <p class="cr">{{ text.footer_copyright }}</p>
     <div class="contact">
       <a href="https://www.instagram.com/handleantwerp/" target="_blank">
         <v-icon class="icon">mdi-instagram</v-icon>
@@ -13,8 +13,14 @@
 </template>
 
 <script>
+import { Footer } from "../lang/en.js";
 export default {
-  name: "Footer"
+  name: "Footer",
+  data(){
+    return {
+      text: new Footer()
+    }
+  }
 };
 </script>
 

@@ -1,29 +1,23 @@
 <template>
   <div class="about">
     <Header :backgroundimage="'models/model3.png'" :activepage="1">
-      <template v-slot:title>About</template>
-      <template
-        v-slot:text
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quisquam assumenda obcaecati veniam reprehenderit ad, ullam, necessitatibus nostrum nemo error et placeat aliquam non magnam delectus corrupti enim doloribus molestiae?</template>
+      <template v-slot:title>{{ text.title }}</template>
+      <template v-slot:text>{{ text.description }}</template>
     </Header>
     <div class="information">
       <DescribedImage class="work" :image="'enviroments/enviroment1.jpg'" :reverse="true">
-        <template v-slot:title>Title Here</template>
-        <template
-          v-slot:text
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.</template>
+        <template v-slot:title>{{ text.header1 }}</template>
+        <template v-slot:text>{{ text.paragraph1 }}</template>
       </DescribedImage>
       <DescribedImage class="work" :image="'enviroments/enviroment2.jpg'">
-        <template v-slot:title>Title Here</template>
-        <template
-          v-slot:text
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.</template>
+        <template v-slot:title>{{ text.header2 }}</template>
+        <template v-slot:text>{{ text.paragraph2 }}</template>
       </DescribedImage>
     </div>
     <div class="product">
       <div>
-        <h2>Our Product</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.</p>
+        <h2>{{ text.header3 }}</h2>
+        <p>{{ text.paragraph3 }}</p>
         <Galery
           :nonav="true"
           :image11="'models/model1.png'"
@@ -68,6 +62,7 @@
 </style>
 
 <script>
+import { About } from "../lang/en.js";
 import Header from "../components/Header.vue";
 import DescribedImage from "../components/DescribedImage.vue";
 import Galery from "../components/Galery.vue";
@@ -78,6 +73,11 @@ export default {
     DescribedImage,
     Galery,
     Interested
+  },
+  data() {
+    return {
+      text: new About()
+    };
   }
 };
 </script>
