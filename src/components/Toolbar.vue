@@ -1,24 +1,80 @@
 <template>
-  <v-toolbar flat :color="color">
-    <v-toolbar-items id="main">
+  <div>
+    <div id="bar">
       <router-link class="logo" :to="{ name: 'Home'}">
-        <img src="logo.png" />
+        <img src="images/logo/Icon.png" />
       </router-link>
-      <div id="links">
-        <router-link
-          v-for="link in links"
-          :key="link.id"
-          :class="['link', link.id == activeid ? 'active' : '']"
-          :to="{ name: link.link}"
-        >
-          <div>
-            <p>{{ link.name }}</p>
-          </div>
-        </router-link>
-      </div>
-    </v-toolbar-items>
-  </v-toolbar>
+      <router-link
+        v-for="link in links"
+        :key="link.id"
+        :class="['link', link.id == activeid ? 'active' : '']"
+        :to="{ name: link.link}"
+      >
+        <div>
+          <p>{{ link.name }}</p>
+        </div>
+      </router-link>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+#bar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  transform: translateY(3em);
+  height: 4em;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 999em;
+  align-items: center;
+  box-shadow: 0px 0.2em 0.2em 0.1em grey;
+}
+
+.logo {
+  height: 2em;
+}
+.logo img {
+  height: 2em;
+}
+
+.link {
+  transition: all 0.3s ease-in-out;
+  height: inherit;
+  padding: 0 2% 0 2%;
+  color: black;
+  font-family: HelVeticaNeueLight;
+  font-size: 1em;
+  text-decoration: none;
+}
+.link:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #e35d5b;
+  color: white;
+}
+.link div {
+  position: relative;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.link div p {
+  height: 0.7em;
+  padding-bottom: 0px;
+}
+
+.active {
+  color: #e35d5b;
+  font-family: HelveticaNeueBold;
+}
+.active::after {
+  content: "";
+  display: block;
+  border-bottom: solid #e35d5b 0.2em;
+}
+</style>
 
 <script>
 import { Navigation } from "../lang/en.js";
@@ -26,10 +82,6 @@ let text = new Navigation();
 export default {
   name: "Toolbar",
   props: {
-    color: {
-      type: String,
-      default: '#00000000'
-    },
     activeid: Number
   },
   data() {
@@ -55,60 +107,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#main {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  height: inherit;
-}
-.logo img {
-  height: inherit;
-  width: auto;
-  padding: 2%;
-  transition: all 0.3s ease-in-out;
-}
-.logo img:hover {
-  padding: 1.5%;
-  transition: all 0.3s ease-in-out;
-}
-
-#links {
-  display: flex;
-  align-self: center;
-  align-items: center;
-  height: inherit;
-}
-.link {
-  transition: all 0.3s ease-in-out;
-  height: inherit;
-  padding: 0 20px 0 20px;
-  color: black;
-  font-family: Arial;
-  font-size: 1.5em;
-  text-decoration: none;
-}
-.link:hover {
-  transition: all 0.3s ease-in-out;
-  background-color: #f61f28;
-  color: white;
-}
-.link div {
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-p {
-  height: 1em;
-}
-
-.active {
-  text-decoration: underline;
-  color: blue;
-}
-</style>

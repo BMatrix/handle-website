@@ -38,3 +38,14 @@ export default {
   opacity: 0;
 }
 </style>
+
+<style>
+@font-face {
+  font-family: HelveticaNeueLight;
+  src: url("../public/fonts/HelveticaNeueLight.ttf");
+}
+@font-face {
+  font-family: HelveticaNeueBold;
+  src: url("../public/fonts/HelveticaNeueBold.ttf");
+}
+</style>

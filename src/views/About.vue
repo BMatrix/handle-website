@@ -1,15 +1,15 @@
 <template>
   <div class="about">
-    <Header :backgroundimage="'models/model3.png'" :activepage="1">
+    <Header :backgroundimage="'images/models/model3.png'" :activepage="1">
       <template v-slot:title>{{ text.title }}</template>
       <template v-slot:text>{{ text.description }}</template>
     </Header>
     <div class="information">
-      <DescribedImage class="work" :image="'enviroments/enviroment1.jpg'" :reverse="true">
+      <DescribedImage class="work" :image="'images/enviroments/enviroment1.jpg'" :reverse="true">
         <template v-slot:title>{{ text.header1 }}</template>
         <template v-slot:text>{{ text.paragraph1 }}</template>
       </DescribedImage>
-      <DescribedImage class="work" :image="'enviroments/enviroment2.jpg'">
+      <DescribedImage class="work" :image="'images/enviroments/enviroment2.jpg'">
         <template v-slot:title>{{ text.header2 }}</template>
         <template v-slot:text>{{ text.paragraph2 }}</template>
       </DescribedImage>
@@ -20,9 +20,9 @@
         <p>{{ text.paragraph3 }}</p>
         <Galery
           :nonav="true"
-          :image11="'models/model1.png'"
-          :image21="'enviroments/enviroment1.jpg'"
-          :image31="'posters/poster1.jpg'"
+          :image11="'images/models/model1.png'"
+          :image21="'images/enviroments/enviroment1.jpg'"
+          :image31="'images/posters/poster1.jpg'"
         ></Galery>
       </div>
     </div>

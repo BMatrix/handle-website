@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <Header :backgroundimage="'enviroments/enviroment1.jpg'" :middle="true" :activepage="3">
+    <Header :backgroundimage="'images/enviroments/enviroment1.jpg'" :middle="true" :activepage="2">
       <template v-slot:title>
       {{ text.title }}
       </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="header" :style="[image, color]">
-    <Toolbar :color="toolbarcolor" :activeid="activepage"></Toolbar>
+    <Toolbar :activeid="activepage"></Toolbar>
     <div class="center">
       <div :class="[middle ? 'hidden' : 'text']">
         <h1>
@@ -79,7 +79,6 @@ export default {
       type: String,
       default: null
     },
-    toolbarcolor: String,
     activepage: Number
   },
   data() {
