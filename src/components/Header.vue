@@ -1,19 +1,20 @@
 <template>
-  <div class="header" :style="[image, color]">
+  <div class="header">
+    <img class="image" :src="backgroundimage" alt />
     <Toolbar :activeid="activepage"></Toolbar>
     <div class="center">
-      <div :class="[middle ? 'hidden' : 'text']">
+      <div class="text">
         <h1>
           <slot name="title"></slot>
         </h1>
         <p>
-          <slot name="text"></slot>
+          <slot name="subtitle"></slot>
         </p>
-      </div>
-      <div :class="[middle ? 'middletext' : 'hidden']">
-        <h1>
-          <slot name="title"></slot>
-        </h1>
+        <router-link v-if="buttonlink != null" class="button" :to="{ name: buttonlink}">
+          <p>
+            <slot name="button"></slot>
+          </p>
+        </router-link>
       </div>
     </div>
   </div>
@@ -34,28 +35,40 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .text h1 {
-  color: blue;
-  font-size: 3em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
+  font-family: HelveticaNeueBold;
+}
+.text h1::before {
+  content: "";
+  display: block;
+  border-bottom: solid #e35d5b 0.2em;
+  width: 1em;
 }
 .text p {
   width: 60%;
+  font-family: HelveticaNeueLight;
+  font-size: 1.1em;
 }
-
-.middletext {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+.button {
+  text-decoration: none;
 }
-.middletext h1 {
-  color: black;
-  font-size: 2.5em;
+.button p {
+  font-family: HelveticaNeueBold;
+  width: fit-content;
+  margin-top: 2em;
+  padding: 0.3em 1em 0.3em 1em;
+  border-radius: 999em;
+  color: white;
+  background-color: #e35d5b;
 }
-
-.hidden {
-  display: none;
+.image {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  clip-path: polygon(60% 0, 100% 0, 65% 100%, 25% 100%);
+  transform: translateX(10%);
 }
 </style>
 
@@ -75,29 +88,11 @@ export default {
       type: String,
       default: null
     },
-    backgroundcolor: {
+    activepage: Number,
+    buttonlink: {
       type: String,
       default: null
-    },
-    activepage: Number
-  },
-  data() {
-    let image = {};
-    let color = {};
-    if (this.backgroundimage != null) {
-      image = {
-        "background-image": `url(${this.backgroundimage})`
-      };
     }
-    if (this.backgroundcolor != null) {
-      color = {
-        "background-color": this.backgroundcolor
-      };
-    }
-    return {
-      image: image,
-      color: color
-    };
   }
 };
 </script>

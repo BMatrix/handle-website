@@ -30,7 +30,7 @@
   background-color: white;
   border-radius: 999em;
   align-items: center;
-  box-shadow: 0px 0.2em 0.2em 0.1em grey;
+  box-shadow: 0px 0.2em 0.2em 0.1em #b4b4b47e;
 }
 
 .logo {

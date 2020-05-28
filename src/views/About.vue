@@ -2,7 +2,7 @@
   <div class="about">
     <Header :backgroundimage="'images/models/model3.png'" :activepage="1">
       <template v-slot:title>{{ text.title }}</template>
-      <template v-slot:text>{{ text.description }}</template>
+      <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <div class="information">
       <DescribedImage class="work" :image="'images/enviroments/enviroment1.jpg'" :reverse="true">

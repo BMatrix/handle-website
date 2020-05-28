@@ -1,6 +1,8 @@
 export class Home {
     //HOME
     title = "You Can Handle It!";
+    subtitle = "You Can Handle It!";
+    buttontext = "You Can Handle It!";
 
     header1 = "The Product Idea";
     paragraph1 = "THE PRODUCT IDEA PARAGRAPH Lorem ipsum dolor sit amet adipisicing elit. Consequuntur sequi suscipit odit molestiae itaque cum! Dolore recusandae perspiciatis eaque, sequi, harum aspernatur doloribus ullam quae beatae numquam cum impedit deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iusto dolorum eaque placeat commodi a sapiente consectetur corporis voluptatem nam. Exercitationem ea officia commodi excepturi quaerat tempore tempora odio architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nam deserunt expedita quo dolor natus quidem placeat reprehenderit voluptatum atque eum, animi voluptatibus at ex iure odio illo voluptatem totam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolorem autem expedita vel amet sint modi eum repellat accusamus in aliquid iure recusandae sed ea aperiam, nam eligendi! Blanditiis, ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium quod deleniti debitis ducimus reiciendis obcaecati mollitia a, incidunt molestiae ullam voluptate itaque, sit officia eveniet iusto quae neque vel.";
@@ -34,7 +36,7 @@ export class Home {
 
 export class About {
     title = "About";
-    description = "About Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quisquam assumenda obcaecati veniam reprehenderit ad, ullam, necessitatibus nostrum nemo error et placeat aliquam non magnam delectus corrupti enim doloribus molestiae?";
+    subtitle = "About";
 
     header1 = "Title Here";
     paragraph1 = "Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem beatae nam quibusdam aperiam sed laborum ducimus eaque quasi ad incidunt! Consectetur sapiente atque placeat dicta velit officia eos vel et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, odio possimus. Eaque officia iusto fuga placeat recusandae deleniti, quis delectus doloremque distinctio quae sequi ipsum odit expedita fugiat praesentium illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus delectus, asperiores, beatae repellendus at amet fugiat commodi accusantium cum necessitatibus ad quam possimus exercitationem officia, ut odit optio nesciunt.";
@@ -47,7 +49,8 @@ export class About {
 }
 
 export class Contact {
-    title = "Have a question or want to collaborate with us? Please get in touch.";
+    title = "Contact";
+    subtitle = "Contact";
 }
 
 export class Navigation {

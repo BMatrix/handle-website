@@ -3,8 +3,11 @@
     <Header
       :backgroundimage="'images/enviroments/enviroment1.jpg'"
       :activepage="0"
+      :buttonlink="'About'"
     >
       <template v-slot:title>{{ text.title }}</template>
+      <template v-slot:subtitle>{{ text.subtitle }}</template>
+      <template v-slot:button>{{ text.buttontext }}</template>
     </Header>
     <div class="productidea">
       <h2>{{ text.header1 }}</h2>
@@ -45,12 +48,22 @@
           <template v-slot:role>{{ text.dario_title }}</template>
           <template v-slot:description>{{ text.dario_description }}</template>
         </member>
-        <member class="member" :reverse="true" :redscale="true" :image="'images/team/EricGonzales.jpg'">
+        <member
+          class="member"
+          :reverse="true"
+          :redscale="true"
+          :image="'images/team/EricGonzales.jpg'"
+        >
           <template v-slot:name>Eric Gonzales</template>
           <template v-slot:role>{{ text.eric_title }}</template>
           <template v-slot:description>{{ text.eric_description }}</template>
         </member>
-        <member class="member" :redscale="true" :background="true" :image="'images/team/JoyAgwunedu.jpg'">
+        <member
+          class="member"
+          :redscale="true"
+          :background="true"
+          :image="'images/team/JoyAgwunedu.jpg'"
+        >
           <template v-slot:name>Joy Agwunedu</template>
           <template v-slot:role>{{ text.joy_title }}</template>
           <template v-slot:description>{{ text.joy_description }}</template>

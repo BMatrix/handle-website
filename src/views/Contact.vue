@@ -1,9 +1,8 @@
 <template>
   <div class="contact">
     <Header :backgroundimage="'images/enviroments/enviroment1.jpg'" :middle="true" :activepage="2">
-      <template v-slot:title>
-      {{ text.title }}
-      </template>
+      <template v-slot:title>{{ text.title }}</template>
+      <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <Contact class="form"></Contact>
   </div>
@@ -17,7 +16,7 @@
 </style>
 
 <script>
-import { Contact as text} from "../lang/en.js";
+import { Contact as text } from "../lang/en.js";
 import Contact from "../components/Contact.vue";
 import Header from "../components/Header.vue";
 export default {
@@ -25,10 +24,10 @@ export default {
     Header,
     Contact
   },
-  data(){
+  data() {
     return {
       text: new text()
-    }
+    };
   }
 };
 </script>
