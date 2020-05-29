@@ -4,9 +4,9 @@
     <Toolbar :activeid="activepage"></Toolbar>
     <div class="center">
       <div class="text">
-        <h1>
+        <TitleOverlined>
           <slot name="title"></slot>
-        </h1>
+        </TitleOverlined>
         <p>
           <slot name="subtitle"></slot>
         </p>
@@ -34,16 +34,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.text h1 {
-  margin-bottom: 0.7em;
-  font-family: HelveticaNeueBold;
-}
-.text h1::before {
-  content: "";
-  display: block;
-  border-bottom: solid #e35d5b 0.2em;
-  width: 1em;
 }
 .text p {
   width: 60%;
@@ -74,10 +64,12 @@
 
 <script>
 import Toolbar from "../components/Toolbar.vue";
+import TitleOverlined from "../components/TitleOverlined.vue";
 export default {
   name: "Header",
   components: {
-    Toolbar
+    Toolbar,
+    TitleOverlined
   },
   props: {
     middle: {

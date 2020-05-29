@@ -4,8 +4,8 @@ export class Home {
     subtitle = "You Can Handle It!";
     buttontext = "You Can Handle It!";
 
-    header1 = "The Product Idea";
-    paragraph1 = "THE PRODUCT IDEA PARAGRAPH Lorem ipsum dolor sit amet adipisicing elit. Consequuntur sequi suscipit odit molestiae itaque cum! Dolore recusandae perspiciatis eaque, sequi, harum aspernatur doloribus ullam quae beatae numquam cum impedit deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iusto dolorum eaque placeat commodi a sapiente consectetur corporis voluptatem nam. Exercitationem ea officia commodi excepturi quaerat tempore tempora odio architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nam deserunt expedita quo dolor natus quidem placeat reprehenderit voluptatum atque eum, animi voluptatibus at ex iure odio illo voluptatem totam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolorem autem expedita vel amet sint modi eum repellat accusamus in aliquid iure recusandae sed ea aperiam, nam eligendi! Blanditiis, ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium quod deleniti debitis ducimus reiciendis obcaecati mollitia a, incidunt molestiae ullam voluptate itaque, sit officia eveniet iusto quae neque vel.";
+    header1 = "Galery";
+    paragraph1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis a officiis quis inventore, iste quasi eum laudantium obcaecati dicta deserunt provident cum reprehenderit doloremque atque consectetur quibusdam quia voluptatum nobis.";
 
     //TEAM
     header2 = "Meet our Team!";
@@ -61,7 +61,6 @@ export class Navigation {
 
 export class Interested {
     title = "Are you interested?";
-    subtext = "Feel free to contact us";
     button = "Contact us";
 }
 

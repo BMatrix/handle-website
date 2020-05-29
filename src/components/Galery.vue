@@ -51,7 +51,7 @@
   grid-template-rows: 1fr;
   overflow: hidden;
   background-color: #b3b3b3;
-  border-radius: 10%;
+  border-radius: 1%;
 }
 .images div img {
   grid-area: 1 / 1 / 1 / 1;
@@ -93,7 +93,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
   padding-top: 20px;
 }
 .buttons span {
@@ -108,43 +107,33 @@
 }
 .buttons span span {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-150%, -150%);
+  transform: translate(-50%, -50%);
   margin: 20px;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: grey;
-}
-.buttons span span:hover {
-  background-color: lightgrey;
+  background-color: #e35d5b;
 }
 .buttons span span:before {
   position: relative;
   display: block;
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 6px;
+  height: 6px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 50%;
 }
-.buttons span .selected,
-.buttons span .selected:hover {
-  background-color: blue;
-}
 .buttons span .selected:after {
   position: relative;
   display: block;
   content: "";
-  width: 8px;
-  height: 8px;
-  left: 30%;
-  bottom: 40%;
-  background-color: blue;
+  width: 10px;
+  height: 10px;
+  bottom: 60%;
+  background-color: #e35d5b;
   border-radius: 50%;
 }
 </style>

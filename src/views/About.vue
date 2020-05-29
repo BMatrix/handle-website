@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <Header :backgroundimage="'images/models/model3.png'" :activepage="1">
-      <template v-slot:title>{{ text.title }}</template>
+      <template v-slot:title>
+        <h1>{{ text.title }}</h1>
+      </template>
       <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <div class="information">
@@ -54,10 +56,6 @@
 }
 .product div p {
   margin: 3em 0 4em 0;
-}
-
-.about .interested {
-  margin: 8em 0 8em 0;
 }
 </style>
 

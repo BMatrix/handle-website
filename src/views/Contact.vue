@@ -1,7 +1,9 @@
 <template>
   <div class="contact">
     <Header :backgroundimage="'images/enviroments/enviroment1.jpg'" :middle="true" :activepage="2">
-      <template v-slot:title>{{ text.title }}</template>
+      <template v-slot:title>
+        <h1>{{ text.title }}</h1>
+      </template>
       <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <Contact class="form"></Contact>
