@@ -99,6 +99,11 @@ export default {
         },
         {
           id: 2,
+          name: text.navigation_team,
+          link: "Team"
+        },
+        {
+          id: 3,
           name: text.navigation_contact,
           link: "Contact"
         }

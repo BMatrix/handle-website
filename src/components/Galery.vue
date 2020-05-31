@@ -59,6 +59,7 @@
   transform: translateX(0%);
   transition: all 0.3s ease-in-out;
   height: 100%;
+  object-fit: cover;
 }
 .image1 :nth-child(1) {
   transform: translateX(0%);

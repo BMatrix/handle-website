@@ -7,26 +7,10 @@
       <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <div class="information">
-      <DescribedImage class="work" :image="'images/enviroments/enviroment1.jpg'" :reverse="true">
+      <DescribedImage :image="'images/enviroments/enviroment1.jpg'" :imageleft="'images/enviroments/enviroment1.jpg'">
         <template v-slot:title>{{ text.header1 }}</template>
         <template v-slot:text>{{ text.paragraph1 }}</template>
       </DescribedImage>
-      <DescribedImage class="work" :image="'images/enviroments/enviroment2.jpg'">
-        <template v-slot:title>{{ text.header2 }}</template>
-        <template v-slot:text>{{ text.paragraph2 }}</template>
-      </DescribedImage>
-    </div>
-    <div class="product">
-      <div>
-        <h2>{{ text.header3 }}</h2>
-        <p>{{ text.paragraph3 }}</p>
-        <Galery
-          :nonav="true"
-          :image11="'images/models/model1.png'"
-          :image21="'images/enviroments/enviroment1.jpg'"
-          :image31="'images/posters/poster1.jpg'"
-        ></Galery>
-      </div>
     </div>
     <Interested class="interested"></Interested>
   </div>
@@ -38,24 +22,7 @@
 }
 
 .information * {
-  margin: 4em 0 4em 0;
-}
-
-.product {
-  padding: 4em 0 5em 0;
-  background-color: grey;
-}
-.product > div {
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-}
-.product div h2 {
-  color: blue;
-  font-size: 3em;
-}
-.product div p {
-  margin: 3em 0 4em 0;
+  margin: 4em auto 4em auto;
 }
 </style>
 
@@ -63,13 +30,11 @@
 import { About } from "../lang/en.js";
 import Header from "../components/Header.vue";
 import DescribedImage from "../components/DescribedImage.vue";
-import Galery from "../components/Galery.vue";
 import Interested from "../components/Interested.vue";
 export default {
   components: {
     Header,
     DescribedImage,
-    Galery,
     Interested
   },
   data() {

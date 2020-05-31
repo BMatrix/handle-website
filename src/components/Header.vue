@@ -63,8 +63,8 @@
 </style>
 
 <script>
-import Toolbar from "../components/Toolbar.vue";
-import TitleOverlined from "../components/TitleOverlined.vue";
+import Toolbar from "./Toolbar.vue";
+import TitleOverlined from "./TitleOverlined.vue";
 export default {
   name: "Header",
   components: {

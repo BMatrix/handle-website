@@ -1,13 +1,17 @@
 <template>
   <div class="content">
-    <h2>{{ text.title }}</h2>
+    <TitleOverlined>
+      <h2>{{ text.title }}</h2>
+    </TitleOverlined>
     <form>
       <div>
-        <input type="text"  :placeholder="text.first_name" required />
-        <input type="text"  :placeholder="text.last_name" required />
+        <input type="text" :placeholder="text.first_name" required />
+        <input type="text" :placeholder="text.last_name" required />
+        <input type="text" :placeholder="text.phone_number" required />
         <input type="email" :placeholder="text.email" required />
-        <input type="text"  :placeholder="text.company" />
-        <textarea rows="4"  :placeholder="text.message" required />
+      </div>
+      <div>
+        <textarea rows="4" :placeholder="text.message" required />
       </div>
       <div>
         <input type="submit" :value="text.button" />
@@ -18,54 +22,70 @@
 
 <style scoped>
 .content {
-  background-color: grey;
-  border-radius: 30px;
   padding: 2em;
 }
 
 h2 {
-  font-size: 3em;
-  color: blue;
+  font-family: HelveticaNeueBold;
+  font-size: 2em;
 }
 
 form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 3em;
+  font-family: HelveticaNeueBold;
 }
 form div {
   display: flex;
   flex-direction: column;
 }
+form div * {
+  padding: 2%;
+  padding-left: 3%;
+  margin: 8px 0 8px 0;
+  border: 2px solid #e35d5b;
+  border-radius: 0.5em;
+  flex-grow: 1;
+}
+
 form div:first-child {
-    flex-grow: 1;
+  flex-basis: 20%;
 }
 form div:first-child * {
-  padding: 0.5%;
-  margin: 8px 0 8px 0;
-  border: 2px solid black;
-  border-radius: 4px;
-  background-color: white;
+  border-radius: 999em;
+  padding: 5%;
+  padding-left: 5%;
+}
+
+form div:nth-child(2) {
+  flex-grow: 1;
+}
+
+form div:last-child {
+  flex-basis: 5%;
 }
 form div:last-child * {
-  padding: 1.5em 2em 1.5em 2em;
-  margin: 8px 0 8px 0;
-  border: 2px solid black;
-  border-radius: 4px;
-  background-color: white;
+  background-color: #e35d5b;
+  color: white;
+  writing-mode: sideways-lr;
 }
 </style>
 
 <script>
 import { Form } from "../lang/en.js";
+import TitleOverlined from "./TitleOverlined.vue";
 export default {
   name: "Contact",
-  data(){
+  components: {
+    TitleOverlined
+  },
+  data() {
     return {
       text: new Form()
-    }
+    };
   }
 };
 </script>

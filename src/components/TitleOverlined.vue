@@ -1,5 +1,5 @@
 <template>
-  <div :class="['text', reverse ? 'reverse' : '']">
+  <div :class="['text', reverse ? 'reversetitleoverlined' : '']">
     <div class="box"></div>
     <slot></slot>
   </div>
@@ -22,7 +22,7 @@
   background-color: #e35d5b;
   margin: 0;
 }
-.reverse {
+.reversetitleoverlined {
   align-items: flex-end;
 }
 </style>

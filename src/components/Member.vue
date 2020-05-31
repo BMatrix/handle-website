@@ -1,45 +1,25 @@
 <template>
-  <div :class="[background ? 'background' : '']">
-    <div class="center">
-      <div :class="['member', reverse ? 'reverse' : '']">
-        <v-avatar size="200px" :class="['avatar']">
-          <img :src="image" />
-          <div :class="['grayscale', redscale ? 'redscale' : '']"></div>
-        </v-avatar>
-        <div id="text" :class="[reverse ? 'righttext' : 'lefttext']">
-          <h2>
-            <slot name="name"></slot>
-          </h2>
-          <h3>
-            <slot name="role"></slot>
-          </h3>
-          <p>
-            <slot name="description"></slot>
-          </p>
-        </div>
-      </div>
+  <div class="member">
+    <v-avatar size="170px" :class="['avatar']">
+      <img :src="image" />
+      <div :class="['grayscale', redscale ? 'redscale' : '']"></div>
+    </v-avatar>
+    <div class="text">
+      <h2>
+        <slot name="name"></slot>
+      </h2>
+      <h3>
+        <slot name="role"></slot>
+      </h3>
     </div>
   </div>
 </template>
 
 <style scoped>
-.center {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .member {
   display: flex;
   flex-direction: row;
   padding: 1em 0 1em 0;
-}
-.reverse {
-  flex-direction: row-reverse;
-}
-
-.background {
-  background-color: #cfcfcf;
 }
 
 .grayscale {
@@ -54,22 +34,21 @@
   background-color: #00000000;
 }
 .redscale {
-  background-color: #f73b3ba2;
+  background-color: #e35d5bb6;
 }
 
-#text {
+.text {
+  margin-left: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: auto;
 }
-.lefttext {
-  text-align: left;
-  margin-left: 5%;
+.text h2 {
+  font-family: HelveticaNeueBold;
 }
-.righttext {
-  text-align: right;
-  margin-right: 5%;
+.text h3 {
+  font-family: HelveticaNeueLight;
 }
 </style>
 
@@ -78,15 +57,7 @@ export default {
   name: "Member",
   props: {
     image: String,
-    reverse: {
-      type: Boolean,
-      default: false
-    },
     redscale: {
-      type: Boolean,
-      default: false
-    },
-    background: {
       type: Boolean,
       default: false
     }

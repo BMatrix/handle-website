@@ -1,50 +1,53 @@
 <template>
   <div :class="['content', reverse ? 'reverse' : '']">
-    <div class="image">
-      <img :src="image" />
-    </div>
+    <img :src="image" />
+    <!--<img :src="imageleft" v-if="imageleft != null" />-->
     <div class="text">
-      <h2><slot name="title"></slot></h2>
-      <p><slot name="text"></slot></p>
+      <TitleOverlined :reverse="true">
+        <h2>
+          <slot name="title"></slot>
+        </h2>
+      </TitleOverlined>
+      <p>
+        <slot name="text"></slot>
+      </p>
     </div>
   </div>
 </template>
 
 <style scoped>
 .content {
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  gap: 15%;
 }
-.content .image {
-  box-flex: 1;
-  flex: 1 1 auto;
-  text-align: center;
-  width: 55%;
-  flex-shrink: 0;
+img {
+  object-fit: cover;
+  width: 50%;
 }
-.content .image img {
-  border-radius: 20px;
-  width: 100%;
+img:first-child {
+  flex-grow: 1;
+}
+img:nth-child(2) {
+  position: absolute;
+  height: fit-content;
+  left: 0;
+  transform: translateX(-90%);
 }
 
-.content .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.text {
+  width: 50%;
 }
-.content .text * {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  text-align: justify;
+.content .text p {
+  font-family: helveticaNeueLight;
+  text-align: right;
 }
 .content .text h2 {
-    text-align: center;
-    font-size: 3em;
-    color: blue;
-    padding-bottom: 1em;
+  font-size: 2em;
+  font-family: HelveticaNeueBold;
+  padding-bottom: 1em;
+  margin-right: 0;
 }
 
 .reverse {
@@ -53,14 +56,22 @@
 </style>
 
 <script>
+import TitleOverlined from "./TitleOverlined";
 export default {
   name: "DescribedImage",
+  components: {
+    TitleOverlined
+  },
   props: {
     reverse: {
       type: Boolean,
       default: false
     },
-    image: String
+    image: String,
+    imageleft: {
+      type: String,
+      default: null
+    }
   }
 };
 </script>

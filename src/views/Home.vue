@@ -31,71 +31,6 @@
         <p>{{ text.paragraph1 }}</p>
       </div>
     </div>
-    <div class="team">
-      <h2>{{ text.header2 }}</h2>
-      <div id="members">
-        <member
-          class="member"
-          :redscale="true"
-          :background="true"
-          :image="'images/team/AleksandraLobka.jpg'"
-        >
-          <template v-slot:name>Aleksandra Lobka</template>
-          <template v-slot:role>{{ text.aleksandra_title }}</template>
-          <template v-slot:description>{{ text.aleksandra_description }}</template>
-        </member>
-        <member class="member" :reverse="true" :image="'images/team/BenVinck.jpg'">
-          <template v-slot:name>Ben Vinck</template>
-          <template v-slot:role>{{ text.ben_title }}</template>
-          <template v-slot:description>{{ text.ben_description }}</template>
-        </member>
-        <member class="member" :background="true" :image="'images/team/DarioVanMechelen.png'">
-          <template v-slot:name>Dario Van Mechelen</template>
-          <template v-slot:role>{{ text.dario_title }}</template>
-          <template v-slot:description>{{ text.dario_description }}</template>
-        </member>
-        <member
-          class="member"
-          :reverse="true"
-          :redscale="true"
-          :image="'images/team/EricGonzales.jpg'"
-        >
-          <template v-slot:name>Eric Gonzales</template>
-          <template v-slot:role>{{ text.eric_title }}</template>
-          <template v-slot:description>{{ text.eric_description }}</template>
-        </member>
-        <member
-          class="member"
-          :redscale="true"
-          :background="true"
-          :image="'images/team/JoyAgwunedu.jpg'"
-        >
-          <template v-slot:name>Joy Agwunedu</template>
-          <template v-slot:role>{{ text.joy_title }}</template>
-          <template v-slot:description>{{ text.joy_description }}</template>
-        </member>
-        <member class="member" :reverse="true" :image="'images/team/MadelinaGavril.jpg'">
-          <template v-slot:name>Madalina Gavril</template>
-          <template v-slot:role>{{ text.madalina_title }}</template>
-          <template v-slot:description>{{ text.madalina_description }}</template>
-        </member>
-        <member
-          class="member"
-          :redscale="true"
-          :background="true"
-          :image="'images/team/MarioGomezCarnero.jpg'"
-        >
-          <template v-slot:name>Mario Gomez Carnero</template>
-          <template v-slot:role>{{ text.mario_title }}</template>
-          <template v-slot:description>{{ text.mario_description }}</template>
-        </member>
-        <member class="member" :reverse="true" :image="'images/team/Sara-GülKangöz.jpg'">
-          <template v-slot:name>Sara-Gül Kangöz</template>
-          <template v-slot:role>{{ text.sara_gul_title }}</template>
-          <template v-slot:description>{{ text.sara_gul_description }}</template>
-        </member>
-      </div>
-    </div>
     <Interested class="interested"></Interested>
   </div>
 </template>
@@ -124,12 +59,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
 }
-
-.team h2 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
 </style>
 
 <script>
@@ -137,14 +66,12 @@ import { Home } from "../lang/en.js";
 import Header from "../components/Header.vue";
 import Galery from "../components/Galery.vue";
 import TitleOverlined from "../components/TitleOverlined.vue";
-import Member from "../components/Member.vue";
 import Interested from "../components/Interested.vue";
 export default {
   components: {
     Header,
     Galery,
     TitleOverlined,
-    Member,
     Interested
   },
   data() {
