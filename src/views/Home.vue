@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header
-      :backgroundimage="'images/enviroments/enviroment1.jpg'"
+      :backgroundimage="'images/headers/Explore.jpg'"
       :activepage="0"
       :buttonlink="'About'"
     >

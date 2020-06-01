@@ -1,8 +1,8 @@
 <template>
-  <div class="header">
-    <img class="image" :src="backgroundimage" alt />
+  <div class="header" :style="backgroundStyle">
+    <!--<img class="image" :src="backgroundimage" alt />-->
     <Toolbar :activeid="activepage"></Toolbar>
-    <div class="center">
+    <div class="aligntext">
       <div class="text">
         <TitleOverlined>
           <slot name="title"></slot>
@@ -23,17 +23,17 @@
 <style scoped>
 .header {
   position: relative;
-  height: 35em;
+  height: 45em;
   width: 100%;
-  background-position: center bottom;
+  background-position: left top;
   background-size: cover;
 }
-.center {
+.aligntext {
   width: 80%;
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 .text p {
   width: 60%;
@@ -51,14 +51,6 @@
   border-radius: 999em;
   color: white;
   background-color: #e35d5b;
-}
-.image {
-  position: absolute;
-  height: 100%;
-  right: 0;
-  top: 0;
-  clip-path: polygon(60% 0, 100% 0, 65% 100%, 25% 100%);
-  transform: translateX(10%);
 }
 </style>
 
@@ -84,6 +76,13 @@ export default {
     buttonlink: {
       type: String,
       default: null
+    }
+  },
+  data(){
+    return {
+      backgroundStyle: {
+        'background-image': `url(${this.backgroundimage}`
+      },
     }
   }
 };

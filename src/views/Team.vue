@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <Header :backgroundimage="'images/enviroments/enviroment1.jpg'" :activepage="2">
+    <Header :backgroundimage="'images/headers/Team.jpg'" :activepage="2">
       <template v-slot:title>
         <h1>{{ text.title }}</h1>
       </template>
