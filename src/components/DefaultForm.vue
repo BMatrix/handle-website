@@ -1,9 +1,6 @@
 <template>
-  <div class="content">
-    <TitleOverlined>
-      <h2>{{ text.title }}</h2>
-    </TitleOverlined>
-    <form>
+  <div>
+    <form class="form">
       <div>
         <input type="text" :placeholder="text.first_name" required />
         <input type="text" :placeholder="text.last_name" required />
@@ -21,15 +18,6 @@
 </template>
 
 <style scoped>
-.content {
-  padding: 2em;
-}
-
-h2 {
-  font-family: HelveticaNeueBold;
-  font-size: 2em;
-}
-
 form {
   display: flex;
   flex-direction: row;
@@ -76,12 +64,7 @@ form div:last-child * {
 
 <script>
 import { Form } from "../lang/en.js";
-import TitleOverlined from "./TitleOverlined.vue";
 export default {
-  name: "Contact",
-  components: {
-    TitleOverlined
-  },
   data() {
     return {
       text: new Form()

@@ -3,7 +3,7 @@ export class Home {
     subtitle = "You Can Handle It!";
     buttontext = "You Can Handle It!";
 
-    header1 = "Galery";
+    header1 = "Gallery";
     paragraph1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis a officiis quis inventore, iste quasi eum laudantium obcaecati dicta deserunt provident cum reprehenderit doloremque atque consectetur quibusdam quia voluptatum nobis.";
 }
 
@@ -30,6 +30,19 @@ export class About {
     paragraph1 = "Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum aperiam aliquid laboriosam dolores voluptatem, ea, quo expedita numquam enim fuga veritatis adipisci placeat perferendis? Ea excepturi a qui et.";
 }
 
+export class Cancel {
+    title = "Cancel";
+    subtitle = "Cancel";
+
+    form_title = "Contact Form";
+    form_first_name = "First name";
+    form_last_name = "Last name";
+    form_email = "Email";
+    form_phone_number = "Phone Number";
+    form_message = "Message";
+    form_button = "Send";
+}
+
 export class Contact {
     title = "Contact";
     subtitle = "Contact";
@@ -39,6 +52,7 @@ export class Navigation {
     navigation_home = "HOME";
     navigation_about = "ABOUT";
     navigation_team = "TEAM";
+    navigation_cancel = "CANCELLATION";
     navigation_contact = "CONTACT";
 }
 

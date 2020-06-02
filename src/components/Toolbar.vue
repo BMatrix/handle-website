@@ -104,6 +104,11 @@ export default {
         },
         {
           id: 3,
+          name: text.navigation_cancel,
+          link: "Cancel"
+        },
+        {
+          id: 4,
           name: text.navigation_contact,
           link: "Contact"
         }

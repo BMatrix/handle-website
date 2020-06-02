@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style scoped>
+div{
+  background-color: #EEEEEF;
+}
 .closer {
   width: 100%;
   height: 3em;
