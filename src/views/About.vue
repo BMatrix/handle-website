@@ -7,9 +7,24 @@
       <template v-slot:subtitle>{{ text.subtitle }}</template>
     </Header>
     <div class="information">
-      <DescribedImage :image="'images/enviroments/enviroment1.jpg'" :imageleft="'images/enviroments/enviroment1.jpg'">
+      <DescribedImage
+        :image="'images/enviroments/enviroment1.jpg'"
+        :imageleft="'images/enviroments/enviroment1.jpg'"
+        :reverse="true"
+      >
         <template v-slot:title>{{ text.header1 }}</template>
-        <template v-slot:text>{{ text.paragraph1 }}</template>
+        <template v-slot:text>
+          <p>{{ text.paragraph1 }}</p>
+        </template>
+      </DescribedImage>
+      <DescribedImage
+        :image="'images/enviroments/enviroment1.jpg'"
+        :imageleft="'images/enviroments/enviroment1.jpg'"
+      >
+        <template v-slot:title>{{ text.header2 }}</template>
+        <template v-slot:text>
+          <p>{{ text.paragraph2 }}</p>
+        </template>
       </DescribedImage>
     </div>
     <Interested class="interested"></Interested>
@@ -23,6 +38,7 @@
 
 .information * {
   margin: 4em auto 4em auto;
+  width: 80%;
 }
 </style>
 

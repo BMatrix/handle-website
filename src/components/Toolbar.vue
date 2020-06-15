@@ -3,11 +3,14 @@
     <div id="bar">
       <router-link class="logo" :to="{ name: 'Home'}">
         <img src="images/logo/Icon.png" />
+        <img v-if="clap" class="clap" src="images/logo/Icon.png" />
+        <div class="clapbox" v-on:click="enableClap"></div>
+        <img src="images/logo/Text.png" />
       </router-link>
       <router-link
         v-for="link in links"
         :key="link.id"
-        :class="['link', link.id == activeid ? 'active' : '']"
+        :class="['link', isChrome ? link.id == activeid ? 'active' : '' : link.id == activeid ? ['active', 'activebar'] : 'hover']"
         :to="{ name: link.link}"
       >
         <div>
@@ -34,10 +37,34 @@
 }
 
 .logo {
-  height: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 6em;
 }
-.logo img {
-  height: 2em;
+.logo img:first-child {
+  height: 6em;
+  margin-right: 1.5em;
+}
+.logo img:last-child {
+  height: 1.5em;
+}
+.logo .clap {
+  transform: translateX(-500%);
+  transition: all 0.7s ease-in-out;
+
+  height: 5.6em;
+  position: absolute;
+}
+.logo:hover .clap {
+  transform: translateX(-2%);
+  transition: all 0.3s ease-in;
+}
+.clapbox{
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  transform: translateY(-120%);
 }
 
 .link {
@@ -49,7 +76,7 @@
   font-size: 1em;
   text-decoration: none;
 }
-.link:hover {
+.hover:hover {
   transition: all 0.3s ease-in-out;
   background-color: #e35d5b;
   color: white;
@@ -69,10 +96,13 @@
   color: #e35d5b;
   font-family: HelveticaNeueBold;
 }
-.active::after {
+.activebar::after {
   content: "";
   display: block;
-  border-bottom: solid #e35d5b 0.2em;
+  background-color: #e35d5b;
+  height: 0.2em;
+  width: 50%;
+  transform: translateX(50%);
 }
 </style>
 
@@ -86,6 +116,8 @@ export default {
   },
   data() {
     return {
+      isChrome: false,
+      clap: false,
       links: [
         {
           id: 0,
@@ -114,6 +146,34 @@ export default {
         }
       ]
     };
+  },
+  created: function() {
+    var isChromium = window.chrome;
+    var winNav = window.navigator;
+    var vendorName = winNav.vendor;
+    var isOpera = typeof window.opr !== "undefined";
+    var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+    var isIOSChrome = winNav.userAgent.match("CriOS");
+
+    if (isIOSChrome) {
+      // is Google Chrome on IOS
+    } else if (
+      isChromium !== null &&
+      typeof isChromium !== "undefined" &&
+      vendorName === "Google Inc." &&
+      isOpera === false &&
+      isIEedge === false
+    ) {
+      // is Google Chrome
+      this.isChrome = true;
+    } else {
+      // not Google Chrome
+    }
+  },
+  methods: {
+    enableClap: function(){
+      this.clap = true;
+    }
   }
 };
 </script>

@@ -11,6 +11,9 @@
       <h3>
         <slot name="role"></slot>
       </h3>
+      <p>
+        <slot name="quote"></slot>
+      </p>
     </div>
   </div>
 </template>
@@ -19,7 +22,8 @@
 .member {
   display: flex;
   flex-direction: row;
-  padding: 1em 0 1em 0;
+  align-items: center;
+  padding: 0;
 }
 
 .grayscale {
@@ -27,12 +31,12 @@
   width: inherit;
   height: inherit;
   transition: all 0.3s ease-in-out;
-  background-color: #777777a2;
+  /*background-color: #777777a2;*/
 }
-.grayscale:hover {
+/*.grayscale:hover {
   transition: all 0.3s ease-in-out;
   background-color: #00000000;
-}
+}*/
 .redscale {
   background-color: #e35d5bb6;
 }

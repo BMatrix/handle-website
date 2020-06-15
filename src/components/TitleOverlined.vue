@@ -1,20 +1,21 @@
 <template>
-  <div :class="['text', reverse ? 'reversetitleoverlined' : '']">
-    <div class="box"></div>
+  <div class="core">
+    <div :class="reverse ? 'reversetitleoverlined' : ''">
+      <div class="box"></div>
+    </div>
     <slot></slot>
   </div>
 </template>
 
 <style scoped>
-.text {
+.core div {
+  margin: 0;
   display: flex;
-  flex-direction: column;
 }
-.text * {
-  padding: 0;
-  margin-bottom: 0.7em;
-  font-family: HelveticaNeueBold;
+.core .reversetitleoverlined{
+  justify-content: flex-end;
 }
+
 .box {
   display: block;
   width: 1.5em;

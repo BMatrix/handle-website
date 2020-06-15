@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="form">
+    <form class="form gap">
       <div>
         <input type="text" :placeholder="text.first_name" required />
         <input type="text" :placeholder="text.last_name" required />
@@ -23,7 +23,6 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  gap: 3em;
   font-family: HelveticaNeueBold;
 }
 form div {
@@ -38,6 +37,17 @@ form div * {
   border-radius: 0.5em;
   flex-grow: 1;
 }
+
+.gap {
+  --gap: 3em;
+  display: inline-flex;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+.gap > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
+
 
 form div:first-child {
   flex-basis: 20%;

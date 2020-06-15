@@ -15,34 +15,42 @@
         <member class="member" :redscale="true" :image="'images/team/AleksandraLobka.jpg'">
           <template v-slot:name>Aleksandra Lobka</template>
           <template v-slot:role>{{ text.aleksandra_title }}</template>
+          <template v-slot:quote>{{ text.aleksandra_quote }}</template>
         </member>
         <member class="member" :image="'images/team/BenVinck.jpg'">
           <template v-slot:name>Ben Vinck</template>
           <template v-slot:role>{{ text.ben_title }}</template>
+          <template v-slot:quote>{{ text.ben_quote }}</template>
         </member>
         <member class="member" :image="'images/team/DarioVanMechelen.png'">
           <template v-slot:name>Dario Van Mechelen</template>
           <template v-slot:role>{{ text.dario_title }}</template>
+          <template v-slot:quote>{{ text.dario_quote }}</template>
         </member>
         <member class="member" :redscale="true" :image="'images/team/EricGonzales.jpg'">
           <template v-slot:name>Eric Gonzales</template>
           <template v-slot:role>{{ text.eric_title }}</template>
+          <template v-slot:quote>{{ text.eric_quote }}</template>
         </member>
         <member class="member" :redscale="true" :image="'images/team/JoyAgwunedu.jpg'">
           <template v-slot:name>Joy Agwunedu</template>
           <template v-slot:role>{{ text.joy_title }}</template>
+          <template v-slot:quote>{{ text.joy_quote }}</template>
         </member>
         <member class="member" :image="'images/team/MadelinaGavril.jpg'">
           <template v-slot:name>Madalina Gavril</template>
           <template v-slot:role>{{ text.madalina_title }}</template>
+          <template v-slot:quote>{{ text.madalina_quote }}</template>
         </member>
         <member class="member" :redscale="true" :image="'images/team/MarioGomezCarnero.jpg'">
           <template v-slot:name>Mario Gomez Carnero</template>
           <template v-slot:role>{{ text.mario_title }}</template>
+          <template v-slot:quote>{{ text.mario_quote }}</template>
         </member>
         <member class="member" :image="'images/team/Sara-GülKangöz.jpg'">
           <template v-slot:name>Sara-Gül Kangöz</template>
           <template v-slot:role>{{ text.sara_gul_title }}</template>
+          <template v-slot:quote>{{ text.sara_gul_quote }}</template>
         </member>
       </div>
     </div>
@@ -61,14 +69,16 @@ h2 {
   width: 80%;
 }
 
-.members{
+.members {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
-.members .member{
-  width: 50%;
+.members .member {
+  width: 45%;
+  margin-bottom: 2em;
 }
 </style>
 

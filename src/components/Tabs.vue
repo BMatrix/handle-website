@@ -6,7 +6,7 @@ export default {
   },
   data() {
     return {
-      selectedIndex: 0
+      selectedIndex: 2
     };
   },
   methods: {
@@ -79,9 +79,13 @@ export default {
 
 <style scoped>
 .tabs {
-  display: flex;
-  flex-direction: row;
-  gap: 5%;
+  --gap: 5%;
+  display: inline-flex;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+.tabs > * {
+  margin: var(--gap) 0 0 var(--gap);
 }
 .tabItem {
   padding: 0.25em 0.75em 0.25em 0.75em;
