@@ -33,7 +33,7 @@
 
 <style>
 .galery{
-  height: 300px;
+  height: 25em;
 }
 
 .images {
@@ -50,7 +50,7 @@
   display: grid;
   grid-template-rows: 1fr;
   overflow: hidden;
-  background-color: #b3b3b3;
+  background-color: #121726;
   border-radius: 1%;
 }
 .images div img {

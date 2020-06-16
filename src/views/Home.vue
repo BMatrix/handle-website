@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header :backgroundimage="'images/headers/Explore.jpg'" :activepage="0" :buttonlink="'About'">
+    <Header :backgroundimage="'images/headers/Explore.png'" :activepage="0" :buttonlink="'About'">
       <template v-slot:title>
         <h1>{{ text.title }}</h1>
       </template>
@@ -10,15 +10,15 @@
     <div class="galerysection">
       <Galery
         class="galery"
-        :image11="'images/models/model1.png'"
-        :image12="'images/models/model2.png'"
-        :image13="'images/models/model3.png'"
-        :image21="'images/enviroments/enviroment1.jpg'"
-        :image22="'images/enviroments/enviroment2.jpg'"
-        :image23="'images/enviroments/enviroment1.jpg'"
-        :image31="'images/posters/poster1.jpg'"
-        :image32="'images/posters/poster2.png'"
-        :image33="'images/posters/poster3.png'"
+        :image11="'images/models/slim_old4.png'"
+        :image21="'images/models/slim_software2.png'"
+        :image31="'images/models/slim1.png'"
+        :image12="'images/models/big1.png'"
+        :image22="'images/models/big2.png'"
+        :image32="'images/models/big_multi2.png'"
+        :image13="'images/ui/intro.png'"
+        :image23="'images/ui/fooddrink.png'"
+        :image33="'images/ui/healthcare.png'"
       ></Galery>
       <div>
         <TitleOverlined :reverse="true">
@@ -33,8 +33,7 @@
     <div class="other">
       <DescribedImage
         class="describedimage"
-        :image="'images/enviroments/enviroment1.jpg'"
-        :imageleft="'images/enviroments/enviroment1.jpg'"
+        :image="'images/enviroments/enviroment1.png'"
         :reverse="true"
       >
         <template v-slot:title>{{ text.header2 }}</template>
@@ -44,8 +43,7 @@
       </DescribedImage>
       <DescribedImage
         class="describedimage"
-        :image="'images/enviroments/enviroment1.jpg'"
-        :imageleft="'images/enviroments/enviroment1.jpg'"
+        :image="'images/models/multi.png'"
       >
         <template v-slot:title>{{ text.header3 }}</template>
         <template v-slot:text>
@@ -84,6 +82,7 @@ h2 {
   width: 80%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .galerysection .galery {
   margin: 2em 2% 2em 0;

@@ -1,10 +1,9 @@
 <template>
   <div class="contact">
-    <Header :backgroundimage="'images/headers/Cancel.jpg'" :middle="true" :activepage="3">
+    <Header :backgroundimage="'images/headers/Cancel.png'" :middle="true" :activepage="3">
       <template v-slot:title>
         <h1>{{ text.title }}</h1>
       </template>
-      <!-- <template v-slot:subtitle>{{ text.subtitle }}</template> -->
     </Header>
     <Tabs class="form">
       <div>

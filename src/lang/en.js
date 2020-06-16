@@ -47,7 +47,6 @@ export class Team {
 
 export class Cancel {
     title = "Cancel";
-    subtitle = "Cancel";
 
     placeholder_cancel_tickets = "This is where the \"Cancel Tickets\" form will go.";
     placeholder_change_reservation = "This is where the \"Change Reservation\" form will go.";
@@ -63,7 +62,6 @@ export class Cancel {
 
 export class Contact {
     title = "Contact";
-    subtitle = "Contact";
 }
 
 export class NotFound {

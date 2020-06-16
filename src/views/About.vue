@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <Header :backgroundimage="'images/headers/About.jpg'" :activepage="1">
+    <Header :backgroundimage="'images/headers/About.png'" :activepage="1">
       <template v-slot:title>
         <h1>{{ text.title }}</h1>
       </template>
@@ -8,8 +8,7 @@
     </Header>
     <div class="information">
       <DescribedImage
-        :image="'images/enviroments/enviroment1.jpg'"
-        :imageleft="'images/enviroments/enviroment1.jpg'"
+        :image="'images/enviroments/enviroment2-2.png'"
         :reverse="true"
       >
         <template v-slot:title>{{ text.header1 }}</template>
@@ -18,8 +17,7 @@
         </template>
       </DescribedImage>
       <DescribedImage
-        :image="'images/enviroments/enviroment1.jpg'"
-        :imageleft="'images/enviroments/enviroment1.jpg'"
+        :image="'images/enviroments/enviroment3.png'"
       >
         <template v-slot:title>{{ text.header2 }}</template>
         <template v-slot:text>
